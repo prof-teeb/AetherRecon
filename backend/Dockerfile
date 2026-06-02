@@ -40,7 +40,7 @@ RUN git clone https://github.com/initstring/cloud_enum.git /opt/cloudenum && \
     pip install --no-cache-dir --break-system-packages -r /opt/cloudenum/requirements.txt && \
     chmod +x /opt/cloudenum/cloud_enum.py && \
     ln -sf /opt/cloudenum/cloud_enum.py /usr/local/bin/cloud_enum && \
-    ln -sf /opt/cloudenum/cloud_enum.py /usr/local/bin/cloudenum
+    ln -sf /opt/cloudenum/cloud_enum.py /usr/local/bin/clodesnum
 
 # Setup Dirsearch (Git version + proper setup)
 RUN git clone https://github.com/maurosoria/dirsearch.git /opt/dirsearch && \
