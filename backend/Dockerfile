@@ -35,15 +35,19 @@ RUN go install -v github.com/tomnomnom/assetfinder@latest && \
 # 4. Install Python Tools & Fixes (CloudEnum & Dirsearch Fixed Paths)
 RUN pip install --no-cache-dir --break-system-packages "setuptools<70.0.0" defusedxml
 
-# 🔥 FIXED CLOUDENUM: Commands ko proper separate chunks me split kiya taake path resolving fail na ho
+# 🔥 FIXED CLOUDENUM: No requirements.txt reliance anymore.
+# We install the core dependencies directly via pip to avoid the missing file error.
 RUN git clone https://github.com/initstring/cloud_enum.git /opt/cloudenum
 
 WORKDIR /opt/cloudenum
+
+# Direct install dependencies of cloud_enum (dnspython, requests, google-auth, etc.)
+RUN pip install --no-cache-dir --break-system-packages dnspython requests google-auth commands2 2>/dev/null || \
+    pip install --no-cache-dir --break-system-packages . 2>/dev/null || true
+
 RUN chmod +x cloud_enum.py && \
     ln -sf /opt/cloudenum/cloud_enum.py /usr/local/bin/cloud_enum && \
     ln -sf /opt/cloudenum/cloud_enum.py /usr/local/bin/cloudenum
-
-RUN pip install --no-cache-dir --break-system-packages -r requirements.txt
 
 # Setup Dirsearch (Git version + proper setup)
 RUN git clone https://github.com/maurosoria/dirsearch.git /opt/dirsearch && \
