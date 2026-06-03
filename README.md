@@ -1,51 +1,112 @@
-# AetherRecon
+# 🛰️ AetherRecon — Automated Reconnaissance Framework
 
-AetherRecon is a modern reconnaissance automation platform designed to simplify the information gathering phase of security assessments and bug bounty workflows. The project combines multiple reconnaissance tools into a centralized pipeline, providing subdomain discovery, live host detection, and scan management through an intuitive web interface.
+> A modern reconnaissance automation platform for security researchers, penetration testers, and bug bounty hunters.
 
-## Features
-
-- Automated reconnaissance pipeline
-- Subdomain enumeration
-- Live host detection
-- FastAPI-powered backend
-- Modern Next.js frontend
-- Docker support for easy deployment
-- Modular architecture for integrating additional security tools
-
-## Tech Stack
-
-### Frontend
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Radix UI
-
-### Backend
-- FastAPI
-- Python
-
-### Infrastructure
-- Docker
-- Docker Compose
+![Python](https://img.shields.io/badge/Python-3.11+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Next.js](https://img.shields.io/badge/Next.js-Frontend-black)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![License](https://img.shields.io/badge/License-Educational-orange)
 
 ---
 
-## Project Structure
+## 🚀 Overview
 
-```bash
-AetherRecon/
-│
-├── Frontend/          # Next.js frontend
-├── backend/           # FastAPI backend
-├── data/              # Scan outputs and temporary files
-├── infra/             # Infrastructure configurations
-└── docker-compose.yml
+AetherRecon is an automated reconnaissance framework designed to streamline the information gathering phase of security assessments.
+
+The platform integrates multiple reconnaissance tools into a centralized workflow, enabling users to perform subdomain discovery, live host detection, and asset enumeration through an intuitive web dashboard.
+
+---
+
+## ✨ Features
+
+### 🔍 Automated Recon Pipeline
+
+Perform end-to-end reconnaissance from a single interface.
+
+### 🌐 Subdomain Enumeration
+
+Discover and aggregate subdomains using integrated reconnaissance tools.
+
+### ⚡ Live Host Detection
+
+Identify active assets and reachable targets automatically.
+
+### 📊 Interactive Dashboard
+
+Monitor scans and review results through a modern web interface.
+
+### 🐳 Docker Deployment
+
+Quick deployment using Docker and Docker Compose.
+
+### 🔧 Modular Architecture
+
+Easily extend the framework with additional reconnaissance modules.
+
+---
+
+## 🏗️ System Architecture
+
+```text
+Target Domain
+      │
+      ▼
+Subdomain Enumeration
+      │
+      ▼
+Result Processing
+      │
+      ▼
+Live Host Detection
+      │
+      ▼
+Data Storage
+      │
+      ▼
+Dashboard & API
 ```
 
 ---
 
-## Installation
+## 🛠 Tech Stack
+
+### Frontend
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Radix UI
+
+### Backend
+
+* FastAPI
+* Python
+
+### Infrastructure
+
+* Docker
+* Docker Compose
+
+---
+
+## 📂 Project Structure
+
+```bash
+AetherRecon/
+│
+├── Frontend/              # Next.js Frontend
+├── backend/               # FastAPI Backend
+├── data/                  # Scan Results
+├── infra/                 # Infrastructure Configurations
+├── docker-compose.yml
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
 
 ### Clone Repository
 
@@ -62,7 +123,7 @@ docker-compose up --build
 
 ---
 
-## Backend Setup
+## 🔧 Backend Setup
 
 ```bash
 cd backend
@@ -74,7 +135,7 @@ uvicorn main:app --reload
 
 ---
 
-## Frontend Setup
+## 🎨 Frontend Setup
 
 ```bash
 cd Frontend
@@ -86,7 +147,7 @@ npm run dev
 
 ---
 
-## API Endpoints
+## 📡 API Usage
 
 ### Full Recon Scan
 
@@ -94,7 +155,7 @@ npm run dev
 GET /api/scan?target=example.com
 ```
 
-### Single Tool Scan
+### Run Specific Tool
 
 ```http
 GET /api/scan/{tool_id}?target=example.com
@@ -102,44 +163,71 @@ GET /api/scan/{tool_id}?target=example.com
 
 ---
 
-## Workflow
+## 🔄 Recon Workflow
 
-1. Target domain is provided.
-2. Subdomain enumeration is performed.
-3. Results are consolidated and filtered.
-4. Live hosts are identified.
-5. Findings are returned through the API and dashboard.
-
----
-
-## Future Enhancements
-
-- DNS Enumeration
-- Port Scanning
-- Screenshot Collection
-- Vulnerability Detection
-- Reporting Dashboard
-- Historical Scan Tracking
+1. User submits target domain.
+2. Framework launches reconnaissance modules.
+3. Results are collected and normalized.
+4. Live assets are identified.
+5. Findings are displayed in the dashboard.
+6. Results become accessible through API endpoints.
 
 ---
 
-## Security Notice
+## 📈 Future Roadmap
 
-This project is intended for authorized security testing, educational purposes, and research activities only. Users are responsible for complying with applicable laws and regulations.
+* DNS Enumeration
+* Port Scanning
+* Screenshot Collection
+* Vulnerability Detection
+* Historical Tracking
+* Exportable Reports
+* Team Collaboration Features
 
 ---
 
-## Project Members
+## ⚠️ Disclaimer
 
-- **Shahjahan**
-- **Muteeb**
+This project is intended solely for authorized security testing, research, and educational purposes.
+
+Users are responsible for complying with all applicable laws and regulations when using this software.
 
 ---
 
-## License
+## 👨‍💻 Project Members
+
+### Shahjahan Vighio
+
+Co-Founder & Security Researcher
+
+### Muhammad Muteeb
+
+Co-Founder & Full Stack Developer
+
+---
+
+## ⭐ Support
+
+If you find this project useful:
+
+⭐ Star the Repository
+
+🍴 Fork the Project
+
+🛡️ Contribute to Development
+
+---
+
+## 📜 License
 
 This project is released for educational and research purposes.
 
 ---
 
-### Built with ❤️ by Shahjahan & Muteeb
+<div align="center">
+
+### Built with ❤️ by Shahjahan & Muhammad Muteeb
+
+AetherRecon © 2026
+
+</div>
