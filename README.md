@@ -202,7 +202,7 @@ Co-Founder & Security Researcher
 
 ### Muhammad Muteeb
 
-Co-Founder & Full Stack Developer
+Co-Founder & Security Researcher
 
 ---
 
