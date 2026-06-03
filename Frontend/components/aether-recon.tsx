@@ -236,7 +236,7 @@ export default function AetherRecon() {
         
         {/* Massive Luxury Heading Layout */}
         <h1 className={`animate-title ${playfair.className} text-5xl md:text-6xl font-medium text-[#09090b] text-center tracking-tight leading-[1.12] max-w-2xl mb-5`}>
-          Effortless infrastructure discovery by sIR.
+          Effortless infrastructure discovery by Aether.
         </h1>
         <p className="animate-title text-[13px] text-zinc-400 text-center max-w-md mb-12 leading-relaxed font-medium tracking-normal">
           Streamline your reconnaissance process with premium automation models tailored for deep network vectors.
